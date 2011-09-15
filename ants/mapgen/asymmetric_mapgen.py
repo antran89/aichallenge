@@ -22,13 +22,13 @@ class AsymmetricMap():
     directions = {'N': (-1,0), 'S': (1,0), 'E': (0,1), 'W': (0,-1)}
 
     #game parameters
-    min_players = 4
-    max_players = 10
-    min_dim = 70
-    max_dim = 120
-    min_start_distance = 30
+    min_players = 2
+    max_players = 2
+    min_dim = 60
+    max_dim = 60
+    min_start_distance = 40
 
-    min_land_proportion = 0.6
+    min_land_proportion = 0.75
     max_land_proportion = 0.9
 
     #map parameters

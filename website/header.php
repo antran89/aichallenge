@@ -4,7 +4,7 @@ $page_render_start_time = microtime(true);
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml"> 
     <head> 
-        <title>Google AI Challenge</title> 
+        <title>CIS99 Competition Server</title> 
         <meta name="description" content="The Google AI Challenge is an international programming contest started by the University of Waterloo Computer Science Club." /> 
         <meta name="keywords" content="" /> 
         
@@ -27,7 +27,7 @@ flush();
         <div id="wrapper">
             <div id="header" class="columns">
                 <div class="left">
-                    <h1>Google AI Challenge</h1>
+                    <h1>CIS99 Competition Server</h1>
                 </div>
                 <div class="right">
                     <img src="images/ants.png" alt="Ants Logo" />

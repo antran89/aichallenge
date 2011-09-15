@@ -22,12 +22,12 @@ class SymmetricMap():
 
     #game parameters
     min_players = 4
-    max_players = 10
-    min_dim = 70
+    max_players = 4
+    min_dim = 120
     max_dim = 120
-    min_start_distance = 30
+    min_start_distance = 20
 
-    min_land_proportion = 0.6
+    min_land_proportion = 0.75
     max_land_proportion = 0.9
     
     no_extra_walks = 30

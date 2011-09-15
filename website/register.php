@@ -58,14 +58,15 @@ if($server_info["submissions_open"]) { ?>
     <td>&nbsp;</td>
   </tr>
   <!-- Email -->
-  <tr>
+<!--  <tr>
     <td>Email Address</td>
     <td>&nbsp;</td>
     <td><input name="user_email" type="text" id="user_email" value="<?php echo isset($_POST['user_email'])?htmlentities($_POST['user_email'], ENT_COMPAT, "UTF-8"):'' ?>" /></td>
     <td>You can use any email address. You will use this address to confirm
         the creation of your account.</td>
-  </tr>
+  </tr> -->
   <!-- Status -->
+<!--
   <tr>
     <td>Status</td>
     <td>&nbsp;</td>
@@ -86,7 +87,7 @@ if($server_info["submissions_open"]) { ?>
     </td>
     <td>Choose the option that best describes your academic status.
       First-year students may be eligible for special prizes.</td>
-  <!-- School -->
+  <!-- School --><!--
   <tr>
     <td>Organization</td>
     <td>&nbsp;</td>
@@ -129,7 +130,8 @@ if($server_info["submissions_open"]) { ?>
         </td>
         <td>If your organization isn't present in drowdown, select 'Other' and enter your organization.</td>
   </tr>
-  <!-- Country -->
+-->
+  <!-- Country --><!--
   <tr>
     <td>Country</td>
     <td>&nbsp;</td>
@@ -152,6 +154,7 @@ if($server_info["submissions_open"]) { ?>
     </td>
     <td>Choose the country where you currently reside.</td>
   </tr>
+-->
   <!-- Biographical Information -->
   <tr>
     <td>About You</td>

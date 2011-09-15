@@ -1,8 +1,8 @@
 #!/bin/sh
-
-ORIG_DIR=`pwd`
-cd `dirname $0`
+echo $1
+#ORIG_DIR=`pwd`
+#cd `dirname $0`
 python release_stale_jails.py
-python worker.py -t -n 0 &
-cd $ORIG_DIR
+python worker.py -t -n $1
+#cd $ORIG_DIR
 

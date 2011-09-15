@@ -414,7 +414,7 @@ def main(argv=["worker_setup.py"]):
     setup_contest_files(opts)
     if opts.create_jails:
         setup_base_jail(opts)
-        setup_jailusers(opts)
+        #setup_jailusers(opts)
     start_script = os.path.join(opts.root_dir, opts.local_repo,
             "worker/start_worker.sh")
     if opts.install_cronjob:

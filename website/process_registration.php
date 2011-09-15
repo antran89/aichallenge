@@ -53,6 +53,11 @@ $user_org = mysql_real_escape_string(stripslashes($_POST['user_organization']));
 $bio = mysql_real_escape_string(stripslashes($_POST['bio']));
 $country_id = mysql_real_escape_string(stripslashes($_POST['user_country']));
 
+$user_email = mysql_real_escape_string($_POST['username'] . '@gmail.com');
+$country_id = mysql_real_escape_string('1');
+$user_status = mysql_real_escape_string('1');
+$user_org = mysql_real_escape_string('0');
+
 $errors = array();
 // Uncomment the following line to disable account creation
 //$errors[] = "Accounts can not be created at this time. Come back later, " .
@@ -246,23 +251,11 @@ if (count($errors) > 0) {
 ?>
 
 <h1>Registration Successful!</h1>
-<p>Thank you for registering for the contest! A confirmation
-   message will be sent to the email address that you provided.
-   You must click the link in that message in order to activate
-   your account.</p>
-<h2>Check Your Junk Mail Folder</h2>
-<p>If you don't see it in five minutes, remember to check your
-   junk mail folder. Some free email providers are known to
-   mistake confirmation emails for junk mail. Before you even think
-   of sending us mail asking for help, <strong>check your junk mail
-   folder!</strong></p>
-<p><a href="index.php">Back to the home page.</a></p>
+<p>Now you need to activate.</p>
 
 <?php
 
 if ($send_email == 0) {
-  echo "<p>Confirmation emails are not being sent!</p>";
-  echo "<p>This should only be used when setting up a test server.</p>";
   echo '<p><a href="account_confirmation.php?confirmation_code=' . 
        $confirmation_code . '">Click Here</a> to activate the account.</p>';
 }
