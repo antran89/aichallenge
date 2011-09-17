@@ -45,7 +45,9 @@ function nice_version($version, $date=NULL, $submission_id=NULL) {
 
 function nice_map($map) {
     $map_name = explode('.', $map, 1);
-    $pos1 = strrpos($map,'/') + 1;
+    $pos1 = strrpos($map,'/');
+    if ($pos > 0)
+      $pos += 1;
     $pos2 = strrpos($map,'.');
     $map_name = substr($map, $pos1, $pos2-$pos1);
     return "<span><a href=\"map.php?map=".$map."\">$map_name</a></span>";

@@ -200,7 +200,7 @@ def create_jail_group(options):
 
 def create_jail_user(username):
     """ Setup a jail user with the given username """
-    run_cmd("useradd -g jailusers -d /home/jailuser %s" % (username,))
+    #run_cmd("useradd -g jailusers -d /home/jailuser %s" % (username,))
     # Add rule to drop any network communication from this user
     run_cmd("iptables -A OUTPUT -m owner --uid-owner %s -j DROP" % (username,))
     # Create user specific chroot
@@ -407,14 +407,14 @@ def main(argv=["worker_setup.py"]):
             install_all_languages()
     if opts.install_jailguard:
         install_jailguard(opts)
-    if opts.create_jails:
-        setup_base_chroot(opts)
+#    if opts.create_jails:
+        #setup_base_chroot(opts)
     if opts.packages_only:
         return
     setup_contest_files(opts)
     if opts.create_jails:
         setup_base_jail(opts)
-        #setup_jailusers(opts)
+        setup_jailusers(opts)
     start_script = os.path.join(opts.root_dir, opts.local_repo,
             "worker/start_worker.sh")
     if opts.install_cronjob:
